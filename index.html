@@ -1,0 +1,18 @@
+<html>
+<head>
+  <title>HTML5 Backwards Compatable Datepicker</title>
+  <link href="jquery-ui.min.css" rel="stylesheet" />
+</head>
+<body>
+  <input type="date" id="datepicker" class="datepicker" />
+  <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="jquery-ui.min.js"></script>
+  <script type="text/javascript" src="modernizr-custom.js"></script>
+  <script type="text/javascript">
+  $(function() {
+    if (!Modernizr.inputtypes.date) {
+      $(".datepicker").datepicker();
+    }
+  });
+  </script>
+</body>
